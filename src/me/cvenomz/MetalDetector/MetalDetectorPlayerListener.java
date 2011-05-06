@@ -136,8 +136,24 @@ public class MetalDetectorPlayerListener extends PlayerListener {
 	
 	private String getRelativeCoordinates(Player p, Block b)
 	{
-		return "("+(b.getX()-p.getLocation().getBlockX())+","+(b.getY()-p.getLocation().getBlockY())+","+(b.getZ()-p.getLocation().getBlockZ())+")";
+		int dir = (int) ((p.getLocation().getYaw() + 30) / 90);
+		dir %= 4;
+		int x,y,z;
+		x=(b.getX()-p.getLocation().getBlockX());
+		y=(b.getY()-p.getLocation().getBlockY());
+		z=(b.getZ()-p.getLocation().getBlockZ());
+		if (dir == 1)
+			return "("+(0-x)+","+y+","+(0-z)+")";
+		if (dir == 2)
+			return "("+(0-z)+","+y+","+x+")";
+		if (dir == 3)
+			return "("+x+","+y+","+z+")";
+		if (dir == 0)
+			return "("+z+","+y+","+(0-x)+")";
+		
+		//return "("+(b.getX()-p.getLocation().getBlockX())+","+(b.getY()-p.getLocation().getBlockY())+","+(b.getZ()-p.getLocation().getBlockZ())+")";
+		return ""+p.getLocation().getYaw();
 	}
-	
+	//90=-x,180=-z
 	
 }
