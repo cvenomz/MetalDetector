@@ -1,0 +1,14 @@
+MetalDector is a bukkit plugin for helping players find ores while mining.
+
+To use MetalDetector, one must have a diamond pickaxe, then right-click.
+A report will be displayed in the following format:
+ORE : Cluster size - Relative Location
+for example...
+IRON_ORE : 8 - (4,-5,3)
+
+This means a cluster of eight iron ores has been detected, and for the player
+to reach it, they must go 4 in the x direction, 5 down, and 3 in the z direction
+
+The MetalDetector (diamond pickaxe) has a range of 8, however, this range
+may be increased to 16 if the player has a solid block of diamond within their
+inventory
