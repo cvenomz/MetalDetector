@@ -25,7 +25,7 @@ public class MetalDetectorPlayerListener extends PlayerListener {
 	{
 		if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR)
 		{
-			if (e.getItem().getTypeId() == 278)  //278 = Diamond Pickaxe
+			if (e.getItem() != null && e.getItem().getTypeId() == 278)  //278 = Diamond Pickaxe
 			{
 				doMetalDetect(e);
 			}

@@ -10,7 +10,7 @@ public class MetalDetector extends JavaPlugin{
 
 	private MetalDetectorPlayerListener playerListener;
 	private Logger log = Logger.getLogger("Minecraft");
-	private double version = 0.2;
+	private double version = 0.3;
 	
 	@Override
 	public void onDisable() {
